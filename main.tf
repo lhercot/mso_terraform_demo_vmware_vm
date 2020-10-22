@@ -6,16 +6,6 @@ terraform {
   }
 }
 
-provider "vsphere" {
-  # Configuration options
-  // Requires ENV variable VSPHERE_USER 
-  // Requires ENV variable VSPHERE_PASSWORD
-  // Requires ENV variable VSPHERE_SERVER
-
-  # If you have a self-signed cert
-  allow_unverified_ssl = true
-}
-
 data "vsphere_datacenter" "dc" {
   name = var.vmware_dc
 }
